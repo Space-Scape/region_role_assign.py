@@ -32,9 +32,7 @@ async def area_panel(ctx):
     )
     embed.set_footer(text="Select your areas")
 
-    # Upload the image and get the URL
-    file = discord.File("https://cdn.discordapp.com/attachments/1273094409432469605/1299599252829503508/xejylXb.png?ex=671dc99f&is=671c781f&hm=ddb7ebcf4e96205dc6dca40b3a93f29411990fb26b7afb591c4cca2fbdce14cf&", filename="xejylXb.png")  # Use the path where your image is stored
-    embed.set_image(url="attachment://xejylXb.png")  # Reference the uploaded image as an attachment
+    embed.set_image(url="https://cdn.discordapp.com/attachments/1273094409432469605/1299599252829503508/xejylXb.png?ex=671dc99f&is=671c781f&hm=ddb7ebcf4e96205dc6dca40b3a93f29411990fb26b7afb591c4cca2fbdce14cf&")  # Reference the uploaded image as an attachment
 
 
     guild = ctx.guild
