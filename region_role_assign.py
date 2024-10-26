@@ -23,7 +23,7 @@ async def area_panel(ctx):
     await ctx.message.delete()
 
     embed = discord.Embed(
-        title= custom_emoji_leagues + " Area Role Assign " + custom_emoji_leagues,
+        title= ":leagues: Area Role Assign :leagues",
         description="Select the areas you have unlocked in-game."
                     "\nDe-select to remove the area.",
         color=discord.Color.green()
