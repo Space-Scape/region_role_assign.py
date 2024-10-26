@@ -23,14 +23,15 @@ async def area_panel(ctx):
     await ctx.message.delete()
 
     embed = discord.Embed(
-        title=":park: Area Role Assign :desert:",
+        title= custom_emoji_leagues + " Area Role Assign " + custom_emoji_leagues,
         description="Select the areas you have unlocked in-game."
-                    "/nDe-select to remove the area.",
+                    "\nDe-select to remove the area.",
         color=discord.Color.green()
     )
     embed.set_footer(text="Select your areas")
 
     guild = ctx.guild
+    custom_emoji_leagues = discord.utils.get(guild.emojis, name="leagues")
     custom_emoji_desert = discord.utils.get(guild.emojis, name="desert")
     custom_emoji_kourend = discord.utils.get(guild.emojis, name="kourend")
     custom_emoji_fremennik = discord.utils.get(guild.emojis, name="fremennik")
