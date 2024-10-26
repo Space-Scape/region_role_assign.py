@@ -25,7 +25,7 @@ async def area_panel(ctx):
 
     # Construct the embed with the emoji
     embed = discord.Embed(
-        title=f"{leagues_emoji} Area Role Assign {leagues_emoji}" if leagues_emoji else "Area Role Assign",
+        title=f"{leagues_emoji} Area Role Assign {leagues_emoji}",
         description="Select the areas you have unlocked in-game."
                     "\nDe-select to remove the area.",
         color=discord.Color.green()
