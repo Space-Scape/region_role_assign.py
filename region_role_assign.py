@@ -30,7 +30,7 @@ async def area_panel(ctx):
                     "\nDe-select to remove the area.",
         color=discord.Color.green()
     )
-    embed.set_image(url="https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2Fi1j82m3iz4ja1.png")
+    embed.set_image(url="https://imgur.com/a/J0KuMSy")
     
     embed.set_footer(text="Select your areas")
 
