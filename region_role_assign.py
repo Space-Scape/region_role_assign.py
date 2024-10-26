@@ -25,7 +25,7 @@ async def area_panel(ctx):
     embed = discord.Embed(
         title=":park: Area Role Assign :desert:",
         description="Select the areas you have unlocked in-game."
-                    "De-select to remove the area.",
+                    "/nDe-select to remove the area.",
         color=discord.Color.green()
     )
     embed.set_footer(text="Select your areas")
