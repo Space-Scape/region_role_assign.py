@@ -30,10 +30,11 @@ async def area_panel(ctx):
                     "\nDe-select to remove the area.",
         color=discord.Color.green()
     )
+    embed.set_image(url="https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2Fi1j82m3iz4ja1.png")
+    
     embed.set_footer(text="Select your areas")
 
     guild = ctx.guild
-    custom_emoji_leagues = discord.utils.get(guild.emojis, name="leagues")
     custom_emoji_desert = discord.utils.get(guild.emojis, name="desert")
     custom_emoji_kourend = discord.utils.get(guild.emojis, name="kourend")
     custom_emoji_fremennik = discord.utils.get(guild.emojis, name="fremennik")
