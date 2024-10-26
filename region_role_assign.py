@@ -10,20 +10,22 @@ intents.reactions = True
 intents.guilds = True
 intents.members = True
 
-bot = commands.Bot(command_prefix="!", intents=intents, help_command=None)  # Disable the default help command
+bot = commands.Bot(command_prefix="!", intents=intents, help_command=None)
 
 @bot.event
 async def on_ready():
+    global leagues_emoji
+    leagues_emoji = discord.utils.get(bot.emojis, name="leagues")
     print(f'{bot.user.name} has connected to Discord!')
     await bot.change_presence(activity=discord.Game(name="Managing Roles"))
 
 @bot.command()
 async def area_panel(ctx):
-    # Delete the user's command message
     await ctx.message.delete()
 
+    # Construct the embed with the emoji
     embed = discord.Embed(
-        title= ":leagues: Area Role Assign :leagues",
+        title=f"{leagues_emoji} Area Role Assign {leagues_emoji}" if leagues_emoji else "Area Role Assign",
         description="Select the areas you have unlocked in-game."
                     "\nDe-select to remove the area.",
         color=discord.Color.green()
