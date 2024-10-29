@@ -26,11 +26,11 @@ async def area_panel(ctx):
     # Construct the embed with the emoji
     embed = discord.Embed(
         title=f"{leagues_emoji} Region Role Assign {leagues_emoji}",
-        description="# Select the regions you have unlocked in-game. #\n"
+        description="# Select the regions you have unlocked #\n"
                     "## Click again to remove them. ##",
         color=discord.Color.green()
     )
-    embed.set_footer(text="Select your regions")
+    embed.set_footer(text="**Select your regions**")
 
     embed.set_image(url="https://cdn.discordapp.com/attachments/1273094409432469605/1299599252829503508/xejylXb.png?ex=671dc99f&is=671c781f&hm=ddb7ebcf4e96205dc6dca40b3a93f29411990fb26b7afb591c4cca2fbdce14cf&")  # Reference the uploaded image as an attachment
 
@@ -54,7 +54,7 @@ async def area_panel(ctx):
     button_asgarnia = Button(label="Asgarnia", style=discord.ButtonStyle.secondary, emoji=custom_emoji_asgarnia)
     button_morytania = Button(label="Morytania", style=discord.ButtonStyle.secondary, emoji=custom_emoji_morytania)
     button_kandarin = Button(label="Kandarin", style=discord.ButtonStyle.secondary, emoji=custom_emoji_kandarin)
-    button_varlamore = Button(label="Kandarin", style=discord.ButtonStyle.secondary, emoji=custom_emoji_varlamore)
+    button_varlamore = Button(label="Varlamore", style=discord.ButtonStyle.secondary, emoji=custom_emoji_varlamore)
 
     view = View(timeout=None)
     view.add_item(button_desert)
