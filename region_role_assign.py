@@ -25,12 +25,12 @@ async def area_panel(ctx):
 
     # Construct the embed with the emoji
     embed = discord.Embed(
-        title=f"{leagues_emoji} Area Role Assign {leagues_emoji}",
-        description="Select the areas you have unlocked in-game."
-                    "\nDe-select to remove the area.",
+        title=f"{leagues_emoji} Region Role Assign {leagues_emoji}",
+        description="# Select the regions you have unlocked in-game. #\n"
+                    "## Click again to remove them. ##",
         color=discord.Color.green()
     )
-    embed.set_footer(text="Select your areas")
+    embed.set_footer(text="Select your regions")
 
     embed.set_image(url="https://cdn.discordapp.com/attachments/1273094409432469605/1299599252829503508/xejylXb.png?ex=671dc99f&is=671c781f&hm=ddb7ebcf4e96205dc6dca40b3a93f29411990fb26b7afb591c4cca2fbdce14cf&")  # Reference the uploaded image as an attachment
 
@@ -44,6 +44,7 @@ async def area_panel(ctx):
     custom_emoji_asgarnia = discord.utils.get(guild.emojis, name="asgarnia")
     custom_emoji_morytania = discord.utils.get(guild.emojis, name="morytania")
     custom_emoji_kandarin = discord.utils.get(guild.emojis, name="kandarin")
+    custom_emoji_varlamore = discord.utils.get(guild.emojis, name="varlamore")
 
     button_desert = Button(label="Desert", style=discord.ButtonStyle.secondary, emoji=custom_emoji_desert)
     button_kourend = Button(label="Kourend", style=discord.ButtonStyle.secondary, emoji=custom_emoji_kourend)
@@ -53,6 +54,7 @@ async def area_panel(ctx):
     button_asgarnia = Button(label="Asgarnia", style=discord.ButtonStyle.secondary, emoji=custom_emoji_asgarnia)
     button_morytania = Button(label="Morytania", style=discord.ButtonStyle.secondary, emoji=custom_emoji_morytania)
     button_kandarin = Button(label="Kandarin", style=discord.ButtonStyle.secondary, emoji=custom_emoji_kandarin)
+    button_varlamore = Button(label="Kandarin", style=discord.ButtonStyle.secondary, emoji=custom_emoji_varlamore)
 
     view = View(timeout=None)
     view.add_item(button_desert)
@@ -63,6 +65,7 @@ async def area_panel(ctx):
     view.add_item(button_asgarnia)
     view.add_item(button_morytania)
     view.add_item(button_kandarin)
+    view.add_item(button_varlamore)
 
     async def button_callback(interaction):
         role_name = interaction.data['custom_id']
@@ -83,8 +86,8 @@ async def area_panel(ctx):
         await interaction.response.defer()
         await feedback_message.delete(delay=1)
 
-    buttons = [button_desert, button_kourend, button_fremennik, button_tirannwn, button_wilderness, button_asgarnia, button_morytania, button_kandarin]
-    role_names = ["Desert", "Kourend", "Fremennik", "Tirannwn", "Wilderness", "Asgarnia", "Morytania", "Kandarin"]
+    buttons = [button_asgarnia, button_kandarin, button_desert, button_fremennik, button_wilderness, button_morytania, button_kourend, button_varlamore, button_tirannwn]
+    role_names = ["Asgarnia", "Kandarin", "Desert", "Fremennik", "Wilderness", "Morytania", "Kourend", "Varlamore", "Tirannwn"]
 
     for button, role_name in zip(buttons, role_names):
         button.custom_id = role_name
