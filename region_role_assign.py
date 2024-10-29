@@ -57,15 +57,15 @@ async def area_panel(ctx):
     button_varlamore = Button(label="Varlamore", style=discord.ButtonStyle.secondary, emoji=custom_emoji_varlamore)
 
     view = View(timeout=None)
-    view.add_item(button_desert)
-    view.add_item(button_kourend)
-    view.add_item(button_fremennik)
-    view.add_item(button_tirannwn)
-    view.add_item(button_wilderness)
     view.add_item(button_asgarnia)
-    view.add_item(button_morytania)
     view.add_item(button_kandarin)
+    view.add_item(button_desert)
+    view.add_item(button_fremennik)
+    view.add_item(button_wilderness)
+    view.add_item(button_morytania)
+    view.add_item(button_kourend)
     view.add_item(button_varlamore)
+    view.add_item(button_tirannwn)
 
     async def button_callback(interaction):
         role_name = interaction.data['custom_id']
